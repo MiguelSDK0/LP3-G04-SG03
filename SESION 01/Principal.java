@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package principal;
 
 import java.util.Scanner;
@@ -23,9 +19,32 @@ public class Principal {
                 System.out.println("Te quedan " + cont + " vidas");
                 cont--;
         }while(vida < 3 && !fl);
+<<<<<<< HEAD
         if(fl == true)
             System.out.println("Adivinaste!!! ¡GANASTE UN INCREIBLE PREMIO!");
         else
+=======
+        if(fl == true){
+            System.out.println("Adivinaste!!! ¡GANASTE UN INCREIBLE PREMIO!");
+            String resultado = elegir(vida);
+            System.out.println("Tu regalo es: " + resultado);
+        }else
+>>>>>>> rama2
             System.out.println("Ups, perdiste...");
+    }
+    public static String elegir(int vida){
+        String gift = "";
+        switch (vida){
+            case 1:
+                gift = "Un pasaje por el Caribe";
+                break;
+            case 2:
+                gift = "Una visita al museo más cercano a tu casa";
+                break;
+            case 3:
+                gift = "Una entrada al cine";
+                break;
+        }
+        return gift;
     }
 }
